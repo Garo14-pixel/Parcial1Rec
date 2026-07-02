@@ -1,0 +1,251 @@
+tml>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción Trabajo Final - Rememorando La Noche de los Lápices</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           Configuración Global y Estilos Limpios (CSS Interno para evitar fallas)
+           ========================================================================== */
+        :root {
+            --color-primario: #111827;      /* Gris oscuro institucional */
+            --color-secundario: #4b5563;    /* Gris medio para textos secundarios */
+            --color-acento: #b91c1c;        /* Rojo bordó de fuerte contraste */
+            --color-fondo: #f9fafb;         /* Fondo suave para descanso visual */
+            --color-tarjeta: #ffffff;       /* Fondo blanco puro para destacar elementos */
+            --max-ancho-lectura: 680px;     /* Ancho óptimo de caja para lectura digital */
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-primario);
+            line-height: 1.8;    
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            text-align: center;
+            padding: 55px 20px 40px;
+            background: linear-gradient(180deg, #f3f4f6 0%, var(--color-fondo) 100%);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: var(--color-primario);
+            margin: 0 0 12px 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        header h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--color-acento);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        main {
+            max-width: var(--max-ancho-lectura);
+            margin: 0 auto;
+            padding: 25px 20px 60px;
+        }
+
+        .titulo-secundario {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--color-primario);
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: #374151;
+            margin-bottom: 1.6rem;
+            text-align: left; /* Alineación obligatoria a la izquierda para evitar fatiga visual */
+        }
+
+        a {
+            color: var(--color-acento);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        
+        a:hover {
+            color: #991b1b;
+        }
+
+        /* Módulo de Imagen Portarretrato */
+        .contenedor-tarjeta {
+            background-color: var(--color-tarjeta);
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+            padding: 16px;
+            margin: 35px 0 25px;
+            border: 1px solid #f3f4f6;
+        }
+
+        .imagen-tf {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        .atribucion-tafol {
+            font-size: 0.85rem;
+            color: var(--color-secundario);
+            text-align: center;
+            line-height: 1.6;
+            margin-top: 15px;
+            border-top: 1px dashed #e5e7eb;
+            padding-top: 14px;
+            margin-bottom: 0;
+        }
+
+        .tafol-item-italica {
+            font-style: italic;
+        }
+
+        .tafol-item-negrita {
+            font-weight: 500;
+        }
+
+        /* Botones de Enlace */
+        .bloque-botones {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 25px;
+        }
+
+        .boton-accion {
+            display: block;
+            text-align: center;
+            padding: 16px 20px;
+            background-color: var(--color-primario);
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: background-color 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .boton-accion:hover {
+            background-color: #1f2937;
+        }
+
+        .boton-accion.boton-secundario {
+            background-color: transparent;
+            color: var(--color-primario) !important;
+            border: 2px solid var(--color-primario);
+            box-shadow: none;
+        }
+
+        .boton-accion.boton-secundario:hover {
+            background-color: #f3f4f6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 45px 20px;
+            background-color: #f3f4f6;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 70px;
+        }
+
+        .contenedor-licencia {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            max-width: 525px;
+        }
+
+        .contenedor-licencia img {
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .texto-licencia {
+            font-size: 0.9rem;
+            color: var(--color-secundario);
+            line-height: 1.6;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rememorando La Noche de los Lápices</h1>
+        <h2>Producción Documental Multimedia Interactiva</h2>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                "Rememorando La Noche de los Lápices" es una producción documental multimedia e interactiva orientada a estudiantes universitarios. La propuesta busca mantener viva la memoria histórica mediante una experiencia de exploración libre y no lineal, enfocada en los derechos estudiantiles y los acontecimientos trágicos de la última dictadura cívico-militar en Argentina. 
+            </p>
+            <p>
+                La interfaz utiliza la metáfora de un panel de corcho colgado en el pasillo de una facultad, simulando el típico entorno cotidiano donde se comparten anuncios, apuntes y panfletos gremiales. A través de este espacio de reflexión, los usuarios interactúan directamente con fotografías, recortes periodísticos de la época y documentos históricos oficiales de la Conadep. Al hacer clic sobre los elementos, se despliegan contenidos ampliados que profundizan en las biografías y los contextos individuales de los jóvenes estudiantes secundarios secuestrados.
+            </p>
+            <p>
+                Para expandir el universo narrativo, el entorno se complementa con recursos audiovisuales y una pizarra cooperativa digital en Padlet. En este espacio final, bajo la premisa "¿Cuál es tu objetivo como estudiante?", los visitantes participan activamente dejando sus propias notas adhesivas con comentarios reflexivos. De este modo, la interfaz gráfica de usuario de manipulación directa se transforma en una herramienta colectiva que no solo narra el pasado, sino que invita a la juventud actual a co-crear un espacio de debate, conciencia democrática y defensa de la educación pública.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="titulo-secundario">Exploración de la Interfaz</h2>
+            <div class="contenedor-tarjeta">
+                <img src="capturauno" alt="capturadeltf">
+                
+                <p class="atribucion-tafol">
+                    <strong>Atribución del recurso (Modelo TAFOL):</strong><br>
+                    • <strong>T</strong>ítulo: <span class="tafol-item-italica">"Interfaz de la pizarra de corcho interactiva"</span><br>
+                    • <strong>A</strong>utores: <span class="tafol-item-negrita">Gomes T., Manzano A., Moreira L., Rivero G., Zárate V.</span><br>
+                    • <strong>F</strong>uente: Producción interactiva alojada en <a href="https://view.genially.com/6a387733cf16284bd18c1185" target="_blank">Genially</a><br>
+                    • <strong>L</strong>icencia: <span class="tafol-item-negrita">Creative Commons CC BY-SA 4.0</span>.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="titulo-secundario">Acceso a la Experiencia</h2>
+            <p>Explorá de manera autónoma el universo interactivo del proyecto o sumá tu reflexión en la pizarra comunitaria:</p>
+            <div class="bloque-botones">
+                <a href="https://view.genially.com/6a387733cf16284bd18c1185" target="_blank" class="boton-accion">Explorar el Proyecto en Genially</a>
+                <a href="https://padlet.com/thatagomes914/cual-es-tu-objetivo-como-estudiante-b42yh23vbrne1erv" target="_blank" class="boton-accion boton-secundario">Participar en el Padlet Comunitario</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor-licencia">
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                <img alt="Licencia Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+            </a>
+            <p class="texto-licencia">
+                Este sitio promocional y la producción multimedia asociada están protegidos bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.
+            </p>
+        </div>
+    </footer>
